@@ -18,7 +18,6 @@ public class LibroController {
         this.libroRepository = libroRepository;
     }
 
-    // Listar libros (con filtro opcional por género)
     @GetMapping
     public List<Libro> listarLibros(@RequestParam(required = false) Integer genero) {
         if (genero != null) {
@@ -27,13 +26,11 @@ public class LibroController {
         return libroRepository.findAll();
     }
 
-    // Detalle por ID
     @GetMapping("/{id}")
     public Optional<Libro> detalleLibro(@PathVariable Integer id) {
         return libroRepository.findById(id);
     }
 
-    // Actualizar libro
     @PutMapping("/{id}")
     public Libro actualizarLibro(@PathVariable Integer id, @RequestBody Libro nuevo) {
         return libroRepository.findById(id).map(libro -> {

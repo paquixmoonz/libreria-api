@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/generos")
-@CrossOrigin(origins = "http://localhost:5173") // para React
+@CrossOrigin(origins = "http://localhost:5173") 
 public class GeneroController {
 
     private final GeneroRepository generoRepository;
