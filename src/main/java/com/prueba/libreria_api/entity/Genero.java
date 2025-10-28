@@ -14,7 +14,7 @@ public class Genero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_genero")
-    private Integer idGenero;   // 👈 importante: "G" mayúscula
+    private Integer idGenero;   
 
     private String nombre;
     private String descripcion;
